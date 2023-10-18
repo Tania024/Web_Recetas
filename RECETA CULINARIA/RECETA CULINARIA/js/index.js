@@ -26,39 +26,67 @@ document.addEventListener("DOMContentLoaded", function() {
       // Reiniciar los campos del formulario
       form.reset();
     });
+
   
     
 
 
-    const searchInput = document.getElementById("search-input");
-    const recipeList = document.getElementById("recipe-list");
-    const recipeDetails = document.getElementById("recipe-details");
-    
-    searchInput.addEventListener("input", () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const recipes = recipeList.getElementsByTagName("li");
-    
-        for (const recipe of recipes) {
-            const recipeName = recipe.textContent.toLowerCase();
-            if (recipeName.includes(searchTerm)) {
-                recipe.style.display = "block";
-            } else {
-                recipe.style.display = "none";
-            }
-        }
-    });
-    
-    recipeList.addEventListener("click", (event) => {
-        if (event.target.classList.contains("view-button")) {
-            const recipeName = event.target.parentElement.textContent.split(" ")[1]; // Obtenemos el nombre de la receta
-            const recipeDetailText = `Detalles de "${recipeName}" Aquí puedes agregar detalles específicos de la receta.`;
-            recipeDetails.textContent = recipeDetailText;
-        }
-        
 
-    });
-    
 
+    const searchContainer = document.querySelector('.search-input-box');
+    const inputSearch = searchContainer.querySelector('input');
+    const boxSuggestions = document.querySelector(
+      '.container-suggestions'
+    );
+    
+    const searchLink = document.querySelector('a');
+    
+    inputSearch.onkeyup = e => {
+      let userData = e.target.value;
+      let emptyArray = [];
+    
+      if (userData) {
+        emptyArray = suggestions.filter(data => {
+          return data
+            .toLocaleLowerCase()
+            .startsWith(userData.toLocaleLowerCase());
+        });
+    
+        emptyArray = emptyArray.map(data => {
+          return (data = `<li>${data}</li>`);
+        });
+        searchContainer.classList.add('active');
+        showSuggestions(emptyArray);
+    
+        let allList = boxSuggestions.querySelectorAll('li');
+    
+        allList.forEach(li => {
+          li.setAttribute('onclick', 'select(this)');
+        });
+      } else {
+        searchContainer.classList.remove('active');
+      }
+    };
+    
+    function select(element) {
+      let selectUserData = element.textContent;
+      inputSearch.value = selectUserData;
+    
+      searchLink.href = `https://www.google.com/search?q=${inputSearch.value}`;
+      searchContainer.classList.remove('active');
+    }
+    
+    const showSuggestions = list => {
+      let listData;
+    
+      if (!list.length) {
+        userValue = inputSearch.value;
+        listData = `<li>${userValue}</li>`;
+      } else {
+        listData = list.join(' ');
+      }
+      boxSuggestions.innerHTML = listData;
+    };
 
 
 

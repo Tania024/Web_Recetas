@@ -463,33 +463,74 @@ textarea.form-control {
 
 
 
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+	font-family: Poppins;
+	background-color: #414b57;
+	padding: 0 20px;
 }
 
-h1 {
-    text-align: center;
+.container {
+	max-width: 800px;
+	margin: 150px auto;
 }
 
-#search-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.search-input-box {
+	width: 100%;
+	background-color: #2f3640;
+	border-radius: 5px;
+	position: relative;
+	color: #f5f6f4;
+	box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
 }
 
-#recipe-list {
-    list-style: none;
-    padding: 0;
+.search-input-box input {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	height: 55px;
+	padding: 0 60px 0 20px;
+	font-size: 18px;
 }
 
-#recipe-list li {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 5px;
-    background-color: #fff;
+.icon {
+	position: absolute;
+	top: 15px;
+	right: 25px;
+	font-size: 22px;
+	cursor: pointer;
+	color: #0d141f;
+}
+
+/* Contenedor de sugerencias */
+.container-suggestions {
+	max-height: 280px;
+	opacity: 0;
+	pointer-events: none;
+	padding: 0;
+	overflow-y: auto;
+}
+
+.search-input-box.active .container-suggestions {
+	opacity: 1;
+	pointer-events: auto;
+	padding: 10px 8px;
+}
+
+.search-input-box.active .container-suggestions li {
+	display: block;
+}
+
+.container-suggestions li {
+	list-style: none;
+	width: 100%;
+	padding: 8px 12px;
+	border-radius: 5px;
+	display: none;
+}
+
+.container-suggestions li:hover{
+    background-color: #414b57;
 }
