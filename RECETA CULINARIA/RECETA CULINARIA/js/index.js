@@ -54,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const recipeDetailText = `Detalles de "${recipeName}" Aquí puedes agregar detalles específicos de la receta.`;
             recipeDetails.textContent = recipeDetailText;
         }
+        
+
     });
     
 

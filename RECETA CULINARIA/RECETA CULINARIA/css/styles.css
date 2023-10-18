@@ -326,7 +326,7 @@ textarea.form-control {
 
 
 .btn:hover {
-    background-color: #00ccff;
+    background-color: #ec4f07d8;
 }
 
 .list-container {
@@ -374,7 +374,7 @@ textarea.form-control {
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 5px;
-    background-color: #0b99eb2f;
+    background-color: #bb4c0248;
     border: none;
     color: #000;
     cursor: pointer;
