@@ -102,22 +102,7 @@ body {
 
 h2 {
     color: #fff;
-    text-shadow: 0 0 10px #1100ff,
-                 0 0 20px #1100ff,
-                 0 0 30px #1100ff,
-                 0 0 40px #1100ff,
-                 0 0 70px #1100ff,
-                 0 0 80px #1100ff,
-                 0 0 100px #1100ff,
-                 0 0 150px #1100ff;
-}
-
-h3 {
-    color: #fff;
     text-align: center;
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
     text-shadow: 0 0 10px #ff0000,
                  0 0 20px #ff0000,
                  0 0 30px #ff0000,
@@ -128,12 +113,28 @@ h3 {
                  0 0 150px #ff0000;
 }
 
+h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 0 0 10px #3b0fda,
+                 0 0 20px #3b0fda,
+                 0 0 30px #3b0fda,
+                 0 0 40px #3b0fda,
+                 0 0 70px #3b0fda,
+                 0 0 80px #3b0fda,
+                 0 0 100px #3b0fda,
+                 0 0 150px #3b0fda;
+}
+
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 110vh;
-    background: url(imagenes/introduccion.jpg) no-repeat center;
+    background: url(logo.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -373,7 +374,7 @@ textarea.form-control {
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 5px;
-    background-color: #f9ed05;
+    background-color: #0b99eb2f;
     border: none;
     color: #000;
     cursor: pointer;
@@ -459,3 +460,36 @@ textarea.form-control {
     background-repeat: no-repeat;
     background-position: center;
 } */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#recipe-list {
+    list-style: none;
+    padding: 0;
+}
+
+#recipe-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    background-color: #fff;
+}
