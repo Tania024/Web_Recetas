@@ -27,6 +27,46 @@ document.addEventListener("DOMContentLoaded", function() {
       form.reset();
     });
   
+    
+
+
+    const searchInput = document.getElementById("search-input");
+    const recipeList = document.getElementById("recipe-list");
+    const recipeDetails = document.getElementById("recipe-details");
+    
+    searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const recipes = recipeList.getElementsByTagName("li");
+    
+        for (const recipe of recipes) {
+            const recipeName = recipe.textContent.toLowerCase();
+            if (recipeName.includes(searchTerm)) {
+                recipe.style.display = "block";
+            } else {
+                recipe.style.display = "none";
+            }
+        }
+    });
+    
+    recipeList.addEventListener("click", (event) => {
+        if (event.target.classList.contains("view-button")) {
+            const recipeName = event.target.parentElement.textContent.split(" ")[1]; // Obtenemos el nombre de la receta
+            const recipeDetailText = `Detalles de "${recipeName}" Aquí puedes agregar detalles específicos de la receta.`;
+            recipeDetails.textContent = recipeDetailText;
+        }
+    });
+    
+
+
+
+
+
+
+
+
+
+
+
     // Función para guardar los datos en el Local Storage
     function saveDataToLocalStorage(nombre, ingredientes,pasos) {
       // Obtener los datos anteriores del Local Storage
