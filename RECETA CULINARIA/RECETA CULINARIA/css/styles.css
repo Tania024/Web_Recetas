@@ -126,6 +126,8 @@ body {
 
 }
 
+
+
 h2 {
     animation: mover-izquierda-derecha 2s 1;
     animation-fill-mode:forwards;
@@ -259,10 +261,38 @@ h3 {
 }
 
 .imagen {
-    max-width: 50%; 
-    display: block; 
-    margin: 0 auto; 
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+    animation: bounce 1s ease infinite, pulse 2s ease infinite;
+    transform-origin: center;
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.imagen:hover {
+    animation: none; /* Detiene las animaciones al pasar el mouse por encima */
+}
+
 
 .pagina_reglas {
     background: #0a93ef;

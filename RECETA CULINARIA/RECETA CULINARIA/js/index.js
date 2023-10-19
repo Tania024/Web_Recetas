@@ -1,5 +1,16 @@
 
-// Mostar y cocultar infromacion de la receta
+  // Agregar un evento al botón de búsqueda
+  const searchButton = document.getElementById("search-button");
+  searchButton.addEventListener("click", () => {
+    const searchInput = document.getElementById("search-input");
+    const consulta = searchInput.value;
+
+    const resultados = buscarRecetas(consulta);
+    mostrarResultados(resultados);
+  
+
+
+// Mostar y cocultar infromaciode la recetan 
 function ShowHide(){
   var textoc = document.getElementsByClassName("textoc")[0];
   if(textoc.style.visibility == "hidden"){
@@ -10,9 +21,6 @@ function ShowHide(){
   }
 
 }
-
-
-
 
 
 
