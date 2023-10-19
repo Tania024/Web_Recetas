@@ -2,9 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    list-style: none;
+    font-family: 'Quicksand';
 } 
 
 
@@ -26,7 +24,8 @@ body {
         rgba(207,103,235,1)73%,
 
     );
-    font-family:Arial, Helvetica, sans-serif;
+    
+    
 }
 
 
@@ -40,6 +39,13 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100;
+
+    background-image: url(logo.jpg); /* Reemplaza 'ruta-de-la-imagen.jpg' con la URL de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra completamente el elemento */
+    background-position: center; /* Centra la imagen en el elemento */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+
+
 }
 
 .barra_navegacion {
@@ -57,11 +63,13 @@ body {
     color: #9e5ed3;
     text-transform: uppercase;
     font-size: 40px;
+    
 }
 
 .logo img {
     width: 55px;
     height:auto;
+    
 }
 
 .barra_navegacion a {
@@ -90,43 +98,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .introduccion {
     margin-bottom: 40px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     word-break: break-word;
+
 }
 
 h2 {
-    color: #fff;
+    color: #f04f04;
     text-align: center;
-    text-shadow: 0 0 10px #ff0000,
-                 0 0 20px #ff0000,
-                 0 0 30px #ff0000,
-                 0 0 40px #ff0000,
-                 0 0 70px #ff0000,
-                 0 0 80px #ff0000,
-                 0 0 100px #ff0000,
-                 0 0 150px #ff0000;
+    
 }
 
 h3 {
-    color: #fff;
+    color: #91d5e6;
     text-align: center;
     font-size: 25px;
     padding-left: 10px;
     padding-right: 10px;
-    text-shadow: 0 0 10px #3b0fda,
-                 0 0 20px #3b0fda,
-                 0 0 30px #3b0fda,
-                 0 0 40px #3b0fda,
-                 0 0 70px #3b0fda,
-                 0 0 80px #3b0fda,
-                 0 0 100px #3b0fda,
-                 0 0 150px #3b0fda;
 }
 /*  estilo aplicando la informacion de la costa**/
 .costa{
