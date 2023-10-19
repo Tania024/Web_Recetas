@@ -36,7 +36,7 @@ body {
     justify-content: space-between;
     height: 60px;
     background: #6a6a6d;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 100;
 
@@ -210,6 +210,7 @@ h3 {
     background: url(logo.jpg) no-repeat center;
     background-size: cover;
     overflow-x: hidden; /*añadido**/
+    
 }
 
 .header2 {
@@ -243,6 +244,7 @@ h3 {
     background: #ffffff;
     padding: 20px 0;
     /*min-height: 75vh; */
+    position: relative;
 }
 
 .contactos {
@@ -316,12 +318,7 @@ h3 {
     color: #000000;
 }
 
-.video {
-    max-width: 50%;
-    max-height: 50%;
-    display: block;
-    margin: 0 auto;
-}
+
 
 .derechos-reservados {
     text-align: center;
@@ -558,6 +555,7 @@ textarea.form-control {
     top: 60px; /* Ajusta la posición superior del menú */
     right: 0; /* Ajusta la posición a la derecha del menú */
     z-index: 1000; /* Establece un índice de apilamiento superior */
+    
   }
   
   .menu.show-menu ul {
@@ -575,6 +573,7 @@ textarea.form-control {
     color: #000; /* Cambia el color del texto del menú */
     text-decoration: none;
     transition: background-color 0.3s ease; /* Agrega una transición de color de fondo al hacer clic */
+    
   }
   
   .menu.show-menu a:hover {
@@ -585,8 +584,18 @@ textarea.form-control {
 .menu-icon i {
     margin-left: -50px; /* Ajusta el margen izquierdo negativo para mover el icono hacia la izquierda */
     font-size: 24px; /* Aumenta el tamaño del ícono (ajusta el valor según tus preferencias) */
+    
   }
 
 
+
+  #ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
