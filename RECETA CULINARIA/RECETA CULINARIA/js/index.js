@@ -1,3 +1,21 @@
+
+// Mostar y cocultar infromacion de la receta
+function ShowHide(){
+  var textoc = document.getElementsByClassName("textoc")[0];
+  if(textoc.style.visibility == "hidden"){
+    textoc.style.visibility = "visible";
+
+  }else{
+    textoc.style.visibility = "hidden"
+  }
+
+}
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener el formulario y los campos de entrada
     const form = document.getElementById("survey-form");

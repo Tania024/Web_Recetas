@@ -128,6 +128,56 @@ h3 {
                  0 0 100px #3b0fda,
                  0 0 150px #3b0fda;
 }
+/*  estilo aplicando la informacion de la costa**/
+.costa{
+    margin: 150px auto;
+    width: 70%;
+ }
+.img{
+  max-width: 320px;
+  float: left;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+            
+.textoc{
+  color : #fff;
+ }
+
+ .textoc h3{
+    font-size: 42px;
+   }
+
+   .textoc p{
+    font-size: 16px;
+  
+   }
+            
+            
+            /*  fin estilo aplicando la informacion de la costa**/
+
+              /* aplicando estilo la informacion de boton mostar y textoc**/
+              .mostar {
+                text-align: center;
+                display: inline-block;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .textoc {
+                background-color: rgba(182, 184, 185);
+                padding: 10px;
+                text-align: center;
+                overflow: auto;
+                white-space: nowrap;
+                visibility: visible;
+            }
+            
+
+                  /* fin aplicando estilo la informacion de boton mostar y textoc**/
+
 
 .header {
     display: flex;
