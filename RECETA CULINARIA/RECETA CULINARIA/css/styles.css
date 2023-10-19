@@ -535,7 +535,57 @@ textarea.form-control {
     background-position: center;
 } */
 
+/* Estilos iniciales */
+.menu {
+    display: none;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
 
+/* Estilos para mostrar el menú vertical */
+.menu.show-menu {
+    display: block;
+    position: absolute;
+    background: #ffffff; /* Cambia el color de fondo del menú */
+    width: 150px; /* Establece el ancho del menú */
+    top: 60px; /* Ajusta la posición superior del menú */
+    right: 0; /* Ajusta la posición a la derecha del menú */
+    z-index: 1000; /* Establece un índice de apilamiento superior */
+  }
+  
+  .menu.show-menu ul {
+    padding: 0;
+  }
+  
+  .menu.show-menu li {
+    margin: 0;
+    text-align: center; /* Centra el texto del menú verticalmente */
+  }
+  
+  .menu.show-menu a {
+    display: block; /* Convierte los enlaces en elementos de bloque */
+    padding: 10px; /* Aumenta el relleno del menú para hacerlo más fácil de hacer clic */
+    color: #000; /* Cambia el color del texto del menú */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Agrega una transición de color de fondo al hacer clic */
+  }
+  
+  .menu.show-menu a:hover {
+    background: #a68c56; /* Cambia el color de fondo al hacer clic */
+  }
+  
+/* Estilos para el icono de las tres rayitas */
+.menu-icon i {
+    margin-left: -50px; /* Ajusta el margen izquierdo negativo para mover el icono hacia la izquierda */
+    font-size: 24px; /* Aumenta el tamaño del ícono (ajusta el valor según tus preferencias) */
+  }
 
 
 

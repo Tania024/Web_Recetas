@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/index.js"></script>
+    <script src="js/script.js"></script> <!-- Enlace al archivo JavaScript externo -->
   <title>RECETAS DEL ECUADOR</title>
 </head>
 
 <body>
   <div class="head">
     <div class="logo">
-        <a href="index.html"><img src="img/logo.jpg" alt="Básquet"></a>
+        <a href="index.html"><img src="img/logo.jpg" alt="Recetas"></a>
     </div>
-    
-    <nav class="barra_navegacion">
-      <a href="index.html">INICIO</a>
-      <a href="recetas.html"> RECETAS</a>
-      <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
-    </nav>
-  
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="recetas.html">Recetas</a></li>
+        <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+      </ul>
+    </div>
   </div>
 
   <header 
